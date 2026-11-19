@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mi Grupo</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mi Grupo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#14213D">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>body{-webkit-tap-highlight-color:transparent}button{touch-action:manipulation}</style>
+</head>
+<body class="bg-slate-100 text-slate-900 pb-28">
+<header class="sticky top-0 z-10 bg-[#14213D] text-white" style="padding-top:env(safe-area-inset-top)">
+  <div class="flex items-center justify-between px-4 py-3"><h1 class="font-semibold text-lg">Mi Grupo</h1><span id="bd"></span></div>
+  <div id="sb" class="px-4 pb-3" hidden><input id="q" type="search" placeholder="Buscar apellido, nombre o No. Control" class="w-full rounded-xl px-4 py-3 text-base text-slate-900"></div>
+</header>
+<main id="main"></main>
+<nav class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 grid grid-cols-4 text-sm" style="padding-bottom:env(safe-area-inset-bottom)">
+  <button data-a="tab" data-v="pase" class="py-4">Pase</button>
+  <button data-a="tab" data-v="alum" class="py-4">Alumnos</button>
+  <button data-a="tab" data-v="extra" class="py-4">Columnas</button>
+  <button data-a="tab" data-v="cfg" class="py-4">Ajustes</button>
+</nav>
+<div id="t" class="fixed top-16 inset-x-0 mx-auto w-fit max-w-[90vw] rounded-full bg-slate-900 text-white px-4 py-2 text-sm z-50" hidden></div>
+<dialog id="m" class="rounded-2xl p-0 w-[92vw] max-w-md backdrop:bg-black/50"></dialog>
+<script src="app.js"></script>
+</body></html>
